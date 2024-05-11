@@ -289,11 +289,8 @@ public class MainActivity extends AppCompatActivity {
 ## OUTPUT
 
 ![Screenshot 2024-04-24 144355](https://github.com/keerthysesha/animation/assets/125575936/c41b019d-00a3-4a80-91a2-c94ee10e6899)
-
 ![Screenshot 2024-04-24 144414](https://github.com/keerthysesha/animation/assets/125575936/40f34113-de66-404b-bf80-bced0bd624e0)
-
 ![Screenshot 2024-04-24 144426](https://github.com/keerthysesha/animation/assets/125575936/24fe2e80-3a8c-4d0d-8968-d9fd668ae83b)
-
 ![Screenshot 2024-04-24 144500](https://github.com/keerthysesha/animation/assets/125575936/7c581088-26ec-4658-be39-01d467583c62)
 
 ## RESULT
