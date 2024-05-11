@@ -1,32 +1,17 @@
 # Ex.No: 11 Develop a application to add animations to ImageView,Move,blink,fade,clockwise,zoom,slide operations are perform in android studio.
-
-
 ## AIM:
-
 To develop a application to add animation to imageview,move,blink,fade,clockwise,zoom,slide operation using Android Studio.
-
 ## EQUIPMENTS REQUIRED:
-
 Android Studio(Min.required Artic Fox)
-
 ## ALGORITHM:
 Step 1: Open Android Studio and then click on File -> New -> New project.
-
 Step 2: Then type the Application name as "androidanimation" and click Next.
-
 Step 3: Then select the Minimum SDK as shown below and click Next.
-
 Step 4: Then select the Empty Activity and click Next. Finally click Finish.
-
 Step 5: Design layout in activity_main.xml.
-
 Step 6: Create a anim folder under res and create the xml files for the animation operators.
-
 Step 7: Add animation operations in MainActivity file.
-
 Step 8: Save and run the application.
-
-
 ## PROGRAM:
 ```
 /*
@@ -38,39 +23,30 @@ Registeration Number : 212221040082.
 #### MainActivity.java
 ```
 package com.example.androidanimation;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.view.View;
-
-
 public class MainActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
     public void clockwise(View view){
         ImageView image = (ImageView)findViewById(R.id.imageView);
         Animation animation = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.myanimation);
         image.startAnimation(animation);
     }
-
     public void zoom(View view){
         ImageView image = (ImageView)findViewById(R.id.imageView);
         Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(),
                 R.anim.clockwise);
         image.startAnimation(animation1);
     }
-
     public void fade(View view){
         ImageView image = (ImageView)findViewById(R.id.imageView);
         Animation animation1 =
@@ -78,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
                         R.anim.fade);
         image.startAnimation(animation1);
     }
-
     public void blink(View view){
         ImageView image = (ImageView)findViewById(R.id.imageView);
         Animation animation1 =
@@ -86,14 +61,12 @@ public class MainActivity extends AppCompatActivity {
                         R.anim.blink);
         image.startAnimation(animation1);
     }
-
     public void move(View view){
         ImageView image = (ImageView)findViewById(R.id.imageView);
         Animation animation1 =
                 AnimationUtils.loadAnimation(getApplicationContext(), R.anim.move);
         image.startAnimation(animation1);
     }
-
     public void slide(View view){
         ImageView image = (ImageView)findViewById(R.id.imageView);
         Animation animation1 =
@@ -115,7 +88,6 @@ public class MainActivity extends AppCompatActivity {
     android:paddingTop="20dp"
     android:paddingBottom="20dp"
     tools:context=".MainActivity">
-
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -125,7 +97,6 @@ public class MainActivity extends AppCompatActivity {
     android:layout_alignParentTop="true"
     android:layout_centerHorizontal="true"
     />
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="20dp"
@@ -147,7 +118,6 @@ public class MainActivity extends AppCompatActivity {
         android:layout_alignParentStart="true"
         android:layout_marginTop="40dp"
         android:onClick="clockwise"/>
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -156,7 +126,6 @@ public class MainActivity extends AppCompatActivity {
         android:layout_alignTop="@+id/button"
         android:layout_centerHorizontal="true"
         android:onClick="zoom"/>
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -166,7 +135,6 @@ public class MainActivity extends AppCompatActivity {
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:onClick="fade"/>
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -176,7 +144,6 @@ public class MainActivity extends AppCompatActivity {
         android:layout_below="@+id/button"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -188,7 +155,6 @@ public class MainActivity extends AppCompatActivity {
         android:layout_alignEnd="@+id/button2"
         android:layout_alignLeft="@+id/button2"
         android:layout_alignStart="@+id/button2" />
-
     <Button
         android:id="@+id/button6"
         android:layout_width="wrap_content"
@@ -201,7 +167,6 @@ public class MainActivity extends AppCompatActivity {
         android:layout_toRightOf="@+id/textView"
         android:onClick="slide"
         android:text="slide" />
-
 </RelativeLayout>
 ```
 #### myanimation.xml
@@ -217,7 +182,6 @@ public class MainActivity extends AppCompatActivity {
     android:pivotX="50%"
     android:pivotY="50%" >
     </scale>
-
     <scale xmlns:android="http://schemas.android.com/apk/res/android"
         android:startOffset="5000"
         android:fromXScale="3.0"
@@ -237,7 +201,6 @@ public class MainActivity extends AppCompatActivity {
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:interpolator="@android:anim/linear_interpolator"
     android:fillAfter="true">
-
     <translate
         android:fromXDelta="0%p"
         android:toXDelta="75%p"
@@ -261,25 +224,21 @@ public class MainActivity extends AppCompatActivity {
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android"
     android:interpolator="@android:anim/accelerate_interpolator">
-
     <alpha
         android:duration="1000"
         android:fromAlpha="0"
         android:toAlpha="1" />
-
     <alpha
         android:duration="1000"
         android:fromAlpha="1"
         android:startOffset="2000"
         android:toAlpha="0" />
-
 </set>
 ```
 #### clockwise.xml
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android">
-
 <rotate xmlns:android="http://schemas.android.com/apk/res/android"
     android:fromDegrees="0"
     android:toDegrees="360"
@@ -287,7 +246,6 @@ public class MainActivity extends AppCompatActivity {
     android:pivotY="50%"
     android:duration="5000" >
     </rotate>
-
     <rotate xmlns:android="http://schemas.android.com/apk/res/android"
         android:startOffset="5000"
         android:fromDegrees="360"
@@ -303,7 +261,6 @@ public class MainActivity extends AppCompatActivity {
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android"
     android:fillAfter="true" >
-
     <scale
         android:duration="500"
         android:fromXScale="1.0"
@@ -336,7 +293,6 @@ public class MainActivity extends AppCompatActivity {
 ![Screenshot 2024-04-24 144426](https://github.com/keerthysesha/animation/assets/125575936/24fe2e80-3a8c-4d0d-8968-d9fd668ae83b)
 
 ![Screenshot 2024-04-24 144500](https://github.com/keerthysesha/animation/assets/125575936/7c581088-26ec-4658-be39-01d467583c62)
-
 
 ## RESULT
 Thus a Simple Android Application to add animations: Move,blink,fade,clockwise,zoom,slide operations using Android Studio is developed and executed successfully.
